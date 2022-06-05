@@ -1,0 +1,80 @@
+{
+  "name": "epub2",
+  "version": "2.0.9",
+  "description": "Parse ePub electronic book files with Node.JS",
+  "keywords": [
+    "archive",
+    "async",
+    "book",
+    "books",
+    "chapter",
+    "comic",
+    "epub",
+    "epub-maker",
+    "epub-maker2",
+    "extract",
+    "file",
+    "image",
+    "manifest",
+    "metadata",
+    "mobile",
+    "node-novel",
+    "novel",
+    "parse",
+    "promise",
+    "raw",
+    "volume",
+    "zip"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-epub/tree/master/packages/epub2#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-epub/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-epub.git"
+  },
+  "license": "ISC",
+  "author": "Andris Reinman",
+  "contributors": [
+    "andris <andris@node.ee>",
+    "Julien Chaumond <chaumond@gmail.com> (https://github.com/julien-c)"
+  ],
+  "main": "./index",
+  "typings": "./index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "npm:publish": "npm publish",
+    "npm:publish:lerna": "npx lerna publish --yes --cd-version patch",
+    "preversion": "yarn run test",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
+    "ncu": "npx yarn-tool ncu -u",
+    "sort-package-json": "npx yarn-tool sort"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "array-hyper-unique": "^2.0.6",
+    "bluebird": "^3.7.2",
+    "crlf-normalize": "^1.0.7",
+    "node-fetch-cjs": "^3.2.5",
+    "unzipit": "^1.4.0",
+    "tslib": "^2.4.0",
+    "xml2js": "^0.4.23"
+  },
+  "engine": [
+    "node >=0.3.0"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/julien-c/epub/blob/master/LICENSE"
+    }
+  ],
+  "gitHead": "1802dbdf4fc8afc861c88fd6cca2d44a944b7a55"
+}
